@@ -1,0 +1,72 @@
+/* Info Section */
+
+.info-section {
+    padding: 40px 0;
+    
+    position: relative;
+    background-position: center;
+    background: url('./../../img/info-blocks/info-bg1.jpg');
+    background-size: cover;
+    /* Наложение цвета и фото
+    background-color: rgba(0, 0, 0, .75);
+    background-blend-mode: color; */
+}
+
+.info-section.new {
+     background: url('./../../img/info-blocks/info-bg2.jpg');
+ }
+
+/* Наложение черного цвета на рисунок */
+.info-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+
+.info-section__row {
+    z-index: 1;
+    /* Задаем 'position: relative;', чтобы сработал  'z-index' */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.info-section__title {
+    margin: 0;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3; /* 52px */
+}
+
+@media (min-width: 720px) {
+    .info-section {
+        padding: 50px 0;
+    }
+
+    .info-section__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 992px) {
+    .info-section {
+        padding: 68px 0;
+    }
+
+    .info-section__title {
+        font-size: 52px;
+    }
+ }

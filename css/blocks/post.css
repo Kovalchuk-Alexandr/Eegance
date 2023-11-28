@@ -1,0 +1,106 @@
+/* Posts */
+
+.posts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* flex-direction: column; */
+    gap: 40px 30px;
+    margin-bottom: 35px;
+}
+
+.post {
+    max-width: 570px;
+    /* max-height: 170px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.post___img {
+    width: 170px;
+    display: inline-block;
+    
+}
+
+.post__content {
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-left: 20px; */
+}
+
+.post__title {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+.post__text {
+    margin: 0 0 10px;
+    color: #777;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3; /* 18.2px */
+}
+
+.post__read-more {
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.post__read-more::after {
+    content: "";
+    display: inline-block;
+    margin-left: 2px;
+    width: 24px;
+    height: 24px;
+    vertical-align: text-top;
+
+    background-image: url('./../../img/icons/chevron-right.svg');
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    
+    transition: margin 0.2s ease-in;
+}
+
+.post__read-more:hover {
+    text-decoration: underline;
+}
+
+.post__read-more:hover::after {
+    margin-left: 8px;
+}
+
+@media (min-width: 440px) {
+    .post {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .post__title {
+        text-align: start;
+    }
+}
+
+@media (min-width: 992px) {
+    .posts-wrapper {
+        margin-bottom: 75px;
+    }
+}

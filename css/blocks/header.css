@@ -1,0 +1,126 @@
+/* ------------  Header  ------------*/
+
+.header__row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    background-image: url('./../../img/header/photo.jpg');
+    background-position: top center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header__content {
+    margin: auto;
+    max-width: 670px;
+    text-align: center;
+    
+}
+
+.header__title {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.header__text {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    max-width: 590px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5; /* 33px */
+}
+
+.header__text p {
+    margin: 0;
+}
+
+
+.header__photo img {
+    display: none;
+}
+
+
+@media (min-width: 720px) {
+    .header__row {
+        justify-content: end;
+        background-image: none;
+        /* height: auto; */
+    }
+
+    .header__content {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 578px;
+    }
+
+    .header__title {
+        font-size: 48px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+
+    }
+
+    .header__text {
+        margin-left: 10px;
+        margin-bottom: 40px;
+        max-width: 578px;
+        font-size: 18px;
+        line-height: 1.2; /* 33px */
+    }
+
+
+    .header__photo img {
+        display: block;
+        margin-left: auto;
+        height: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .header__row {
+        justify-content: end;
+        background-image: none;
+        height: auto;
+    }
+
+    .header__content {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 670px;
+    }
+
+    .header__title {
+        font-size: 72px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+
+    }
+
+    .header__text {
+        margin-left: 10px;
+        margin-bottom: 60px;
+        max-width: 590px;
+        font-size: 22px;
+        line-height: 1.2; /* 33px */
+    }
+
+    .header__photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+    }
+}
